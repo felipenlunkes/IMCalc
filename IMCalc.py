@@ -4,8 +4,8 @@ class IMCalc:
 
     def __init__(self, win):
 
-        self.lbl1=Label(win, text='Digite sua altura:')
-        self.lbl2=Label(win, text='Digite seu peso:')
+        self.lbl1=Label(win, text='Digite sua altura (cm):')
+        self.lbl2=Label(win, text='Digite seu peso (kg):')
         self.lbl3=Label(win, text='Seu IMC:')
 
         self.lbl1.place(x=50, y=50)
@@ -28,6 +28,8 @@ class IMCalc:
 
         altura=int(self.t1.get())
         peso=int(self.t2.get())
+
+# Precisamos converter a altura em centímetros para metros na conta
 
         resultado=peso/((altura/100)*(altura/100))
 
