@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+
+# Calculadora de IMC, por Felipe Miguel Nery Lunkes
+
 from tkinter import *
 
 class IMCalc:
@@ -12,31 +16,31 @@ class IMCalc:
         self.lbl2.place(x=50, y=100)
         self.lbl3.place(x=50, y=200)
 
-        self.t1=Entry(bd=3)
-        self.t1.place(x=200, y=50)
-        self.t2=Entry()
-        self.t2.place(x=200, y=100)
-        self.t3=Entry()
-        self.t3.place(x=200, y=200)
+        self.texto1=Entry(bd=3)
+        self.texto1.place(x=200, y=50)
+        self.texto2=Entry()
+        self.texto2.place(x=200, y=100)
+        self.texto3=Entry()
+        self.texto3.place(x=200, y=200)
 
-        self.b1=Button(win, text='Pronto!', command=self.pronto)
-        self.b1.place(x=200, y=150)
+        self.botao1=Button(win, text='Pronto!', command=self.pronto)
+        self.botao1.place(x=200, y=150)
 
     def pronto(self):
 
-        self.t3.delete(0, 'end')
+        self.texto3.delete(0, 'end')
 
-        altura=int(self.t1.get())
-        peso=int(self.t2.get())
+        altura=int(self.texto1.get())
+        peso=int(self.texto2.get())
 
 # Precisamos converter a altura em centímetros para metros na conta
 
         resultado=peso/((altura/100)*(altura/100))
 
-        self.t3.insert(END, str(resultado))
+        self.texto3.insert(END, str(resultado))
 
 janela=Tk()
 imcalc=IMCalc(janela)
-janela.title('IMCalc')
+janela.title('IMCalc por Felipe Lunkes')
 janela.geometry("400x300+10+10")
 janela.mainloop()
