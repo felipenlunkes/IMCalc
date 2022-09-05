@@ -2,7 +2,6 @@
 
 # Calculadora de IMC, por Felipe Miguel Nery Lunkes
 
-from site import ENABLE_USER_SITE
 from tkinter import *
 
 class IMCalc:
